@@ -10,7 +10,7 @@
 			<property name="javax.persistence.jdbc.password" value="reppass"/>
 			<property name="javax.persistence.schema-generation.database.action" value="create"/>
 			<property name="hibernate.show_sql" value="true"/>
-			<property name="hibernate.dialect" value="org.hibernate.show_sql"/>
+			<property name="hibernate.dialect.MySQL5Dialect" value="org.hibernate.show_sql"/>
 			<property name="hibernate.format_sql" value="true"/>
 		</properties>
 	</persistence-unit>

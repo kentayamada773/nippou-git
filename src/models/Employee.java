@@ -24,7 +24,7 @@ import javax.persistence.Table;
             query = "SELECT COUNT(e) FROM Employee AS e"
     ),
     @NamedQuery(
-            name = "checkRegisterdCode",
+            name = "checkRegisteredCode",
             query = "SELECT COUNT(e) FROM Employee AS e WHERE e.code = :code"
     ),
     @NamedQuery(
@@ -54,7 +54,7 @@ public class Employee {
     @Column(name = "created_at", nullable = false)
     private Timestamp created_at;
 
-    @Column(name = "update_at", nullable = false)
+    @Column(name = "updated_at", nullable = false)
     private Timestamp updated_at;
 
     @Column(name = "delete_flag", nullable = false)

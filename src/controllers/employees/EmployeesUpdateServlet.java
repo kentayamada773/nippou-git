@@ -44,26 +44,23 @@ public class EmployeesUpdateServlet extends HttpServlet {
 
 
             Boolean codeDuplicateCheckFlag = true;
-            if(e.getCode().equals(request.getParameter("code"))){
+            if(e.getCode().equals(request.getParameter("code"))) {
                 codeDuplicateCheckFlag = false;
-
-            }else{
+            } else {
                 e.setCode(request.getParameter("code"));
             }
 
 
             Boolean passwordCheckFlag = true;
             String password = request.getParameter("password");
-            if(password == null || password.equals("")){
+            if(password == null || password.equals("")) {
                 passwordCheckFlag = false;
-            }else{
+            } else {
                 e.setPassword(
                         EncryptUtil.getPasswordEncrypt(
                                 password,
                                 (String)this.getServletContext().getAttribute("pepper")
-
                                 )
-
                         );
             }
 
@@ -94,5 +91,6 @@ public class EmployeesUpdateServlet extends HttpServlet {
             }
         }
     }
-
 }
+
+
